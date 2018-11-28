@@ -67,6 +67,10 @@ const appendTheEnd = (str) => {
   
   const setStatusAsAuthor = (people) => {
     // Solution code here...
+    people.forEach( element => {
+        element.isAuthor = true;
+    })
+    console.log(people.isAuthor)
   }
   
   /* ------------------------------------------------------------------------------------------------
