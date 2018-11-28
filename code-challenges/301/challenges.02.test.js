@@ -48,6 +48,8 @@ const appendTheEnd = (str) => {
   
   const addBirthYearProperty = (obj, year) => {
     // Solution code here...
+    obj.yearBorn = year;
+    console.log(obj);
   }
   
   /* ------------------------------------------------------------------------------------------------
