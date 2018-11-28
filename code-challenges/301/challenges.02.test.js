@@ -90,6 +90,10 @@ const appendTheEnd = (str) => {
   
   const append = (arr1, arr2) => {
     // Solution code here...
+    arr2.forEach (element => {
+        arr1.push(element);
+    })
+    console.log(arr1);
   
   }
   
