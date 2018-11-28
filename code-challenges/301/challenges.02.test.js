@@ -27,6 +27,8 @@ const appendTheEnd = (str) => {
   
   const appendFirstToLast = (arr) => {
     // Solution code here...
+    arr.push(arr[0]);
+    console.log(arr);
   }
   
   /* ------------------------------------------------------------------------------------------------
