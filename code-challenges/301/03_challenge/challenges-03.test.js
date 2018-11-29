@@ -50,6 +50,23 @@ For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, an
 
 const alphabetizeBetter = (arr) => {
   // Solution code here...
+  
+  arr.sort(function(a,b){
+    let nameA = a.toUpperCase();
+    let nameB = b.toUpperCase();
+
+    if (nameA > nameB) {
+      return 1;
+    }
+    if (nameA < nameB) {
+      return -1;
+    }
+    if (nameA === nameB ){
+      return 0;
+    }
+
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
