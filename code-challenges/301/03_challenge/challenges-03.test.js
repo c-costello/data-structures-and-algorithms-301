@@ -229,6 +229,55 @@ const meetings = [
 
 const sortMeetingsByDay = (arr) => {
   // Solution code here...
+  arr.sort(function( a, b){
+    let dayA = a.dayOfWeek;
+    let dayB = b.dayOfWeek;
+
+    
+    if (dayA === 'Monday'){
+      dayA = 0;
+    }
+    if (dayA === 'Tuesday'){
+      dayA = 1;
+    }
+    if (dayA === 'Wednesday'){
+      dayA = 2;
+    }
+    if (dayA === 'Thursday'){
+      dayA = 3;
+    }
+    if (dayA === 'Friday'){
+      dayA = 7;
+    }
+
+    if (dayB === 'Monday'){
+      dayB = 0;
+    }
+    if (dayB === 'Tuesday'){
+      dayB = 1;
+    }
+    if (dayB === 'Wednesday'){
+      dayB = 2;
+    }
+    if (dayB === 'Thursday'){
+      dayB = 3;
+    }
+    if (dayB === 'Friday'){
+      dayB = 7;
+    }
+
+    if (dayA > dayB) {
+      return 1;
+    }
+    if (dayA < dayB) {
+      return -1;
+    }
+    if (dayA === dayB ){
+      return 0;
+    }
+    
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
