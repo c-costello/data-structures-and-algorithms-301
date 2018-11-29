@@ -82,6 +82,23 @@ Here is an example of the input:
 
 const sortByPrice = (arr) => {
   // Solution code here...
+  arr.sort(function (a,b){
+    let priceA = a.price;
+    let priceB = b.price; 
+    
+    if (priceA > priceB) {
+      return 1;
+    }
+    if (priceA < priceB) {
+      return -1;
+    }
+    if (priceA === priceB ){
+      return 0;
+    }
+
+  });
+  return arr;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
