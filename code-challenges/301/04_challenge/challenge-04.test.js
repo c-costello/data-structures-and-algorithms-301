@@ -34,6 +34,10 @@ Return an array containing all the matches.
 
 const isCapitalized = (str) => {
   // Solution code here...
+  let content = str;
+  let regex = /[A-Z]+[a-z]*/g;
+  let found = content.match(regex);
+  return found;
 };
 
 /* ------------------------------------------------------------------------------------------------
