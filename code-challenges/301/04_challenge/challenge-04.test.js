@@ -17,10 +17,11 @@ const isNum = (input) => {
   let content = input.toString();
   let regex = /\d*/;
   let found = content.match(regex);
-  if (found[0] = true){
-      return true;
-  } else {
-      return false;
+  console.log(found)
+  if (found[0] = input.toString){
+    return true;
+  } else if (found[0] === ''){
+    return false;
   }
 };
 
@@ -47,8 +48,19 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
-  // Solution code here...
-};
+    // Solution code here...
+    let content = arr;
+    let regex = /^[A-J]+[a-z]*/g;
+    let newArr = [];
+    content.forEach( element => {
+      let found = element.match(regex);
+      if (found){
+          newArr.push(found[0].toString());
+          console.log(found);
+      }
+      });
+    return newArr;
+  };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -64,6 +76,16 @@ Do not use the vertical bar (pipe) in your pattern.
 
 const matchMonth = (input) => {
   // Solution code here...
+  let content = input.toString();
+  let regex = /^[o|O]+ct\w*+/;
+  let found = content.match(regex);
+  console.log(found);
+  if (found[0] = oct){
+      return true;
+  } else {
+      return false;
+  }
+
 };
 
 /* ------------------------------------------------------------------------------------------------
