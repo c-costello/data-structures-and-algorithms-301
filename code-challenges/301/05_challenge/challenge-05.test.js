@@ -119,8 +119,19 @@ You may also use other string or array methods.
 const splitFoods = (recipe) => {
   let result = [];
   // Solution code here...
+  for (let i = 0; i < recipe.ingredients.length; i++){
+    let words = recipe.ingredients[i].split(' ');
+    console.log(words)
+    if  (words.length > 4){
+      result.push(words[2] + ' ' + words[3] + ' ' + words[4]);
+    } else if (words.length > 3){
+      result.push(words[2] + ' ' + words[3]);
+    } else if (words.length > 2){
+      result.push(words[2]);
+    }
+  }
   return result;
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
