@@ -87,8 +87,26 @@ const gruffaloCrumble = {
 const listFoods = (recipe) => {
   let result = [];
   // Solution code here...
+  for (let i = 0; i < recipe.ingredients.length ; i++){
+    if (recipe.ingredients[i].indexOf('gallon') !== -1){
+      console.log('gallon');
+      result.push(recipe.ingredients[i].slice(10));
+    } else if (recipe.ingredients[i].indexOf('medium-sized') !== -1){
+        console.log('medium');
+      result.push(recipe.ingredients[i].slice(15));
+    } else if (recipe.ingredients[i].indexOf('cups') !== -1){
+        console.log('cups');
+      result.push(recipe.ingredients[i].slice(8));
+    } else if (recipe.ingredients[i].indexOf('pounds') !== -1){
+        console.log('pounds');
+      result.push(recipe.ingredients[i].slice(9));
+    } else if (recipe.ingredients[i].indexOf('pound') !== -1){
+      result.push(recipe.ingredients[i].slice(8));
+      console.log('pound');
+    }
+  }
   return result;
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
