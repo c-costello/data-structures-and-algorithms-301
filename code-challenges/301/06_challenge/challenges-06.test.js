@@ -128,6 +128,20 @@ The input and output of this function are the same as the input and output from 
 
 const hasChildrenEntries = (arr, character) => {
   // Solution code here...
+  let hasChild = false;
+  let newArr = [];
+  arr.forEach( element =>{
+    newArr = Object.values(element);
+    if (newArr[0] === character){
+      let child = newArr[2];
+      if (child.length < 1 ){
+        hasChild = false;
+      } if (child.length > 0){
+        hasChild = true;
+      }
+    }
+  })
+  return hasChild;
 }
 
 /* ------------------------------------------------------------------------------------------------
