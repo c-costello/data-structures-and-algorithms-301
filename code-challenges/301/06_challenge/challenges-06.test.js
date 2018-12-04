@@ -71,6 +71,8 @@ let characters = [
 
 const totalCharacters = (arr) => {
   // Solution code here...
+  let totalChars = arr.length;
+  return totalChars;
 }
 
 /*------------------------------------------------------------------------------------------------
