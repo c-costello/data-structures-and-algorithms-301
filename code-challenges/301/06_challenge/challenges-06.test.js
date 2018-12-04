@@ -15,7 +15,7 @@ const getCourseKeys = (obj) => {
   // Solution code here...
   let newArr = Object.keys(obj);
   return newArr;
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -104,7 +104,19 @@ hasChildrenValues(characters, 'Eddard') will return false
 
 const hasChildrenValues = (arr, character) => {
   // Solution code here...
-}
+  let hasChild = false;
+  arr.forEach(element => {
+    if (element.name === character){
+      let child = element.children;
+      if (child.length < 1 ){
+        hasChild = false;
+      } if (child.length > 0){
+        hasChild = true;
+      }
+    }
+  });
+  return hasChild;
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
