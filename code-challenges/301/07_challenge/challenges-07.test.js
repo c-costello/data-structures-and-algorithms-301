@@ -75,14 +75,14 @@ For example: evenOdd([1,2,3]) returns ['odd','even','odd'].
 const evenOdd = (arr) => {
   // Solution code here...
   let newArr = arr.map( x =>{
-        if(x % 2 === 0){
-            return 'even';
-        } else if (x % 2 === 1){
-            return 'odd'
-        } else {
-            return 'N/A'
-        }
-  })
+    if(x % 2 === 0){
+      return 'even';
+    } else if (x % 2 === 1){
+      return 'odd';
+    } else {
+      return 'N/A';
+    }
+  });
   return newArr;
 };
 
@@ -130,6 +130,10 @@ const snorlaxAbilities = {
 
 const extractAbilities = (arr) => {
   // Solution code here...
+  let newArr = arr.map(x => {
+    return x.ability.name;
+  });
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
