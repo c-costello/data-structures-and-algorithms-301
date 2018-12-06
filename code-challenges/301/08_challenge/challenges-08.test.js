@@ -31,7 +31,7 @@ For example, filterStringsWithVowels('gregor','hound','xyz') returns ['gregor', 
 
 
 const filterStringsWithVowels = (arr) => {
-  let newArr = []
+  let newArr = [];
   arr.forEach(element =>{
     if (/a|e|i|o|u/.test(element)){
       newArr.push(element);
@@ -50,7 +50,11 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 ------------------------------------------------------------------------------------------------ */
 
 const notInFirstArray = (forbiddenValues, arr) => {
-  // Solution code here...
+
+  let newArr = arr.filter(element => !forbiddenValues.includes(element));
+  return newArr;
+
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
