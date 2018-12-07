@@ -13,7 +13,7 @@ const countNumberOfElements = (arr) => {
   let counter = 0;
   arr.forEach( () => {
     counter++;
-  })
+  });
   return counter;
 };
 
@@ -75,6 +75,7 @@ let starWarsData = [{
 
 const returnNames = (arr) => {
   // Solution code here...
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -86,7 +87,14 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 ------------------------------------------------------------------------------------------------ */
 
 const reversedString = (arr) => {
+  let newArr = arr.split('');
+  let newArr2 = [];
   // Solution code here...
+  for (let i = 1 ; i < newArr.length + 1; i++){
+    newArr2.push(newArr[newArr.length - i]);
+  }
+  console.log(newArr2);
+  return newArr2.toString(','); 
 };
 
 /* ------------------------------------------------------------------------------------------------
