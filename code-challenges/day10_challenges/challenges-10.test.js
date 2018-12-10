@@ -162,6 +162,18 @@ Write a function named findShortest that, given the Star Wars data from Challeng
 ------------------------------------------------------------------------------------------------ */
 
 let findShortest = (data) => {
+let height = '10000';
+data.map (element => {
+  let charHeight = element.height;
+  if (charHeight < height){
+    height = element.height.parseInt();
+  }
+}) 
+data.map ( element => {
+  if (element.height === height){
+    return element.name;
+  }
+});
   // Solution code here...
 }
 
