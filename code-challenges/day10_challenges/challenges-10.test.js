@@ -36,6 +36,13 @@ For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 
 const totalSum = (input) => {
   // Solution code here...
+  let newArr = input.map( element => {
+    let reduced = element.reduce((accumulator, currentValue) => accumulator + currentValue);
+    return reduced;
+  }); 
+  let reduced = newArr.reduce((accumulator, currentValue) => accumulator + currentValue);
+  return reduced;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -52,6 +59,26 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 
 const divisibleByFiveTwoToThePower = (input) => {
   // Solution code here...
+  let holderArr = [];
+  let anotherArr = [];
+  input.map( element => {
+    let newArr = [];
+    element.map( nums => {
+      if ( typeof nums === 'number' && nums % 5 === 0){
+        newArr.push(nums);
+      }
+    });
+    holderArr.push(newArr);
+  });
+
+  holderArr.map( element => {
+    let newArr = [];
+    element.map( nums => {
+      newArr.push(Math.pow(2, nums));
+    });
+    anotherArr.push(newArr);
+  });
+  return anotherArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -118,6 +145,14 @@ let starWarsData = [{
 
 let findMaleAndFemale = (data) => {
   // Solution code here...
+  let newArr = []
+  data.map (element => {
+    if (element.gender === 'female' || element.gender === 'male'){
+      newArr.push(element.name);
+    }
+  });
+  let newStr = newArr.join(' and ');
+  return newStr;
 }
 
 /* ------------------------------------------------------------------------------------------------
