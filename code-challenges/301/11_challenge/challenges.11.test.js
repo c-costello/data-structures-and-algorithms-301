@@ -27,6 +27,8 @@ Note: if you ever need to validate an email using a regex in practice, the Inter
 
 const validateEmail = (email) => {
   // Solution code here...
+  let regex = /^[0-9a-zA-z]+[\.]?[0-9a-zA-Z]+[\@]{1}[0-9a-zA-z]*[\.]{1}[a-zA-z]{3}$/
+  return regex.test(email);
 };
 
 /* ------------------------------------------------------------------------------------------------
