@@ -105,7 +105,19 @@ The top row of the board is considered row zero and row numbers increase as they
 
 const battleship = (board, row, col) => {
   //  Solution code here...
-}
+  for(let i = 0; i < board.length; i ++){
+    for (let j = 0; j < board[0].length; j++){
+      if (i === row && j === col){
+        console.log(j, i);
+        if (board[i][j] === ' '){
+          return 'miss';
+        } else {
+          return 'hit';
+        }
+      }
+    }
+  }
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
