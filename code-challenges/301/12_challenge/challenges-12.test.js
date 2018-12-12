@@ -216,6 +216,21 @@ For example, excel('1,1,1\n4,4,4\n9,9,9') returns [3, 12, 27].
 ------------------------------------------------------------------------------------------------ */
 
 const excel = (str) => {
+  let newArr = str.split('\n');
+  console.log('newArr',newArr);
+  let secondArr = [];
+  for (let i = 0; i < newArr.length; i++){
+
+    let subArr = newArr[i].split(',')
+    console.log('subArr', subArr);
+    let total = 0;
+    for (let j = 0; j < subArr.length; j++){
+      subArr[j] = parseInt(subArr[j]);
+      total += subArr[j];
+    }
+    secondArr.push(total);
+  }
+  return secondArr;
   // Solution code here...
 }
 
