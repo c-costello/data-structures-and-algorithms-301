@@ -46,6 +46,19 @@ For example, (123) 456-7890 returns 1234567890
 
 const standardizePhoneNumbers = (arr) => {
   // Solution code here...
+  let newArr = [];
+  arr.forEach( num => {
+    let a = num.split(' ')
+    let b = a.join('');
+    let c = b.split(')');
+    let d = c.join('');
+    let e = d.split('-');
+    let f = e.join('');
+    let g = f.split('(');
+    let h = g.join('');
+    newArr.push(h);
+  });
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -58,6 +71,7 @@ For example, 'abcdefg' returns 'bdf'
 
 const onlyOddChars = (str) => {
   // Solution code here...
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
